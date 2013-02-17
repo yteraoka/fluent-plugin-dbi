@@ -1,6 +1,8 @@
 # Fluent::Plugin::Dbi
 
-TODO: Write a gem description
+Fluentd Output plugin using DBI
+
+DBI を使って PostgreSQL や MySQL へ INSERT とかを行う Fluentd の Output Plugin
 
 ## Installation
 
@@ -18,7 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    <match dbi.*>
+      type dbi
+      #dsn DBI:Pg:dbname:dbhost
+      dsn DBI:Mysql:dbname:dbhost
+      db_user username
+      db_pass password
+      keys host,time_m,method,uri,protocol,status
+      query insert into access_log (host, time, method, uri, protocol, status) values (?, ?, ?, ?, ?, ?)
+    </match>
 
 ## Contributing
 
