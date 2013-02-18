@@ -28,6 +28,7 @@ class DbiOutput < BufferedOutput
   def write(chunk)
     begin
       dbh = DBI.connect(@dsn, @db_user, @db_pass)
+      dbh['AutoCommit'] = false
       sth = dbh.prepare(@query)
       chunk.msgpack_each { |tag, time, record|
         record.key?('time') || record['time'] = time
