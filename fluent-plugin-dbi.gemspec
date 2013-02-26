@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "fluent-plugin-dbi"
-  gem.version       = "0.0.2"
+  gem.version       = "0.0.3"
   gem.authors       = ["TERAOKA Yoshinori"]
   gem.email         = ["yteraoka@me.com"]
   gem.description   = %q{fluentd output plugin using dbi. PostgreSQL and MySQL are tested}
   gem.summary       = %q{fluentd output plugin using dbi}
-  gem.homepage      = ""
-
+  gem.homepage      = "https://github.com/yteraoka/fluent-plugin-dbi"
+  gem.has_rdoc      = false
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
