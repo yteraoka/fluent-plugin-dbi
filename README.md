@@ -1,4 +1,4 @@
-# Fluent::Plugin::Dbi
+# Fluent::Plugin::Dbi, a plugin for [Fluentd](http://fluentd.org)
 
 Fluentd Output plugin using DBI
 
