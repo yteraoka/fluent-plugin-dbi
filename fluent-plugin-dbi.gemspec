@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "fluent-plugin-dbi"
-  gem.version       = "0.0.3"
+  gem.version       = "1.0.0"
   gem.authors       = ["TERAOKA Yoshinori"]
   gem.email         = ["yteraoka@me.com"]
   gem.description   = %q{fluentd output plugin using dbi. PostgreSQL and MySQL are tested}
