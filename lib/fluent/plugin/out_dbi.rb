@@ -6,7 +6,7 @@ class DbiOutput < BufferedOutput
   config_param :dsn, :string
   config_param :keys, :string
   config_param :db_user, :string
-  config_param :db_pass, :string
+  config_param :db_pass, :string, secret: true
   config_param :query, :string
 
   def initialize
