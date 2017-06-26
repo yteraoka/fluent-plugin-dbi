@@ -4,7 +4,7 @@ class DbiOutput < BufferedOutput
   Plugin.register_output('dbi', self)
 
   config_param :dsn, :string
-  config_param :keys, :string
+  config_param :keys, :array
   config_param :db_user, :string
   config_param :db_pass, :string, secret: true
   config_param :query, :string
@@ -17,8 +17,6 @@ class DbiOutput < BufferedOutput
 
   def configure(conf)
     super
-
-    @keys = @keys.split(",")
   end
 
   def format(tag, time, record)
